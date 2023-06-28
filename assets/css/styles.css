@@ -3,8 +3,8 @@
 
 /*===== VARIABLES CSS =====*/
 :root {
-    --header-height: 3rem;
     --font-semi: 600;
+    --header-height: 3rem;
 }
 
     /*===== Colors =====*/
@@ -35,10 +35,15 @@
         :root {
             --big-font-size: 3.5rem;
             --h2-font-size: 2rem;
-            --normal-font-size: 1rem;
+            --normal-font-size: 2rem;
         }
     }
     
+    @media screen and (min-width: 1440px) {
+        :root {
+            --big-font-size: 8.5rem;
+        }
+    }
     /*===== Font and Font Sizes =====*/
 
 
@@ -55,9 +60,9 @@
     /*===== z index =====*/
     :root {
         --z-back: -10;
+        --z-fixed: 100;
         --z-normal: 1;
         --z-tooltip: 10;
-        --z-fixed: 100;
     }
 
 /*===== BASE =====*/
@@ -70,10 +75,10 @@ html {
 }
 
 body {
-    margin: var(--header-height) 0 0 0;
+    color: var(--second-color);
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    color: var(--second-color);
+    margin: var(--header-height) 0 0 0;
 }
 
 h1, h2, p{
@@ -81,9 +86,9 @@ h1, h2, p{
 }
 
 ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;    
 }
 
 a {
@@ -91,42 +96,42 @@ a {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
     display: block;
+    height: auto;
+    max-width: 100%;
 }
 
 /*===== CLASS CSS ===== */
 .section-title {
-    position: relative;
-    font-size: var(--h2-font-size);
     color: var(--first-color);
+    font-size: var(--h2-font-size);
     margin-top: var(--mb-2);
     margin-bottom: var(--mb-4);
+    position: relative;
     text-align: center;
 }
 
 .section-title::after {
-    position: absolute;
     content:  "";
-    width: 64px;
+    background-color: var(--first-color);
     height: 0.18rem;
     left: 0;
-    right: 0;
     margin: auto;
+    position: absolute;
+    right: 0;
     top: 2rem;
-    background-color: var(--first-color);
+    width: 64px;
 }
 
 .section {
-    padding-top: 3rem;
     padding-bottom: 2rem;
+    padding-top: 3rem;
 }
 
 /*===== LAYOUT =====*/
 .bd-grid {
-    max-width: 1024px;
     display: grid;
+    
     /*
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
@@ -134,37 +139,38 @@ img {
     */
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
+    max-width: 1024px;
 }
 
 .l-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
     background-color: #fff;
     box-shadow:  0 1px 4px rgba(146, 161, 176, .15);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: var(--z-fixed);
 }
 
 /*===== NAV =====*/
 .nav {
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     font-weight: var(--font-semi);
+    height: var(--header-height);
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
     .nav__menu {
-        position: fixed;
-        top: var(--header-height);
-        right: -100%;
-        width: 80%;
+        background-color: var(--second-color);
         height: 100%;
         padding: 2rem;
-        background-color: var(--second-color);
+        position: fixed;
+        top: var(--header-height);
         transition: .5s;
+        right: -100%;
+        width: 80%;
     }
 }
 
@@ -173,8 +179,8 @@ img {
 }
 
 .nav__link {
-    position: relative;
     color: #fff;
+    position: relative;
 }
 
 .nav__link:hover  {
@@ -182,13 +188,13 @@ img {
 }
 
 .nav__link:hover::after{
-    position: absolute;
+    background-color: var(--first-color);
     content: "";
-    width: 100%;
     height: 0.18rem;
     left: 0;
+    position: absolute;
     top: 2rem;
-    background-color: var(--first-color);
+    width: 100%;
 }
 
 .nav__logo {
@@ -203,13 +209,13 @@ img {
 
 /*Active menu*/
 .active::after{
-    position: absolute;
+    background-color: var(--first-color);
     content: "";
-    width: 100%;
     height: 0.18rem;
     left: 0;
+    position: absolute;
     top: 2rem;
-    background-color: var(--first-color);
+    width: 100%;
 }
 
 /*=== Show menu ===*/
@@ -220,8 +226,8 @@ img {
 /*===== HOME =====*/
 .home {
     height: calc(100vh - 3rem);
-    row-gap: 5rem;
     padding: 4rem 0 5rem;
+    row-gap: 5rem;
 } 
 
 .home__data {
@@ -243,10 +249,10 @@ img {
 }
 
 .home__social-icon {
-    width: max-content;
-    margin-bottom: var(--mb-2);
-    font-size: 1.5rem;
     color: var(--second-color);
+    font-size: 1.5rem;
+    margin-bottom: var(--mb-2);
+    width: max-content;
 }
 
 .home__social-icon:hover {
@@ -254,9 +260,9 @@ img {
 }
 
 .home__img {
+    bottom: 0;
     position: absolute;
     right: 0;
-    bottom: 0;
     width: 260px;
 }
 
@@ -270,12 +276,12 @@ img {
 
 /*BUTTONS*/
 .button {
-    display: inline-block;
     background-color: var(--first-color);
+    border-radius: .5rem;
     color: #fff;
+    display: inline-block;
     padding: .75rem 2.5rem;
     font-weight: var(--font-semi);
-    border-radius: .5rem;
 }
 
 .button:hover {
@@ -292,12 +298,12 @@ img {
 }
 
 .about__img {
-justify-self: center;
+    justify-self: center;
 }
 
 .about__img img{
-    width: 200px;
     border-radius: .5rem;
+    width: 200px;
 }
 
 /* ===== SKILLS =====*/
@@ -315,35 +321,35 @@ justify-self: center;
 }
 
 .skills__data {
-    display: flex;
-    justify-content: space-between;
     align-content: center;
-    position: relative;
-    font-weight: var(--font-semi);
-    padding: .5rem 1rem ;
-    margin-bottom: var(--mb-4);
     border-radius: .5rem;
     box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
+    display: flex;
+    font-weight: var(--font-semi);
+    justify-content: space-between;
+    margin-bottom: var(--mb-4);
+    position: relative;
+    padding: .5rem 1rem ;
 }
 
 .skills__icon {
+    color: var(--first-color);
     font-size: 2rem;
     margin-right: var(--mb-2);
-    color: var(--first-color);
 }
 
 .skills__names {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 .skills__bar {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     background-color: var(--first-color);
-    height: .25rem;
     border-radius: .5rem;
+    bottom: 0;
+    height: .25rem;
+    left: 0;
+    position: absolute;
     z-index: var(--z-back);
 }
 
@@ -374,10 +380,10 @@ justify-self: center;
 
 /* ===== FOOTER =====*/
 .footer {
-    background-color: var(--second-color);
     color: #fff;
-    text-align: center;
+    background-color: var(--second-color);
     font-weight: var(--font-semi);
+    text-align: center;
     padding: 2rem 0;
 }
 
@@ -387,9 +393,9 @@ justify-self: center;
 }
 
 .footer__social {
-    margin-bottom: 1.5rem;
     color: #fff;
     margin: 0 var(--mb-2);
+    margin-bottom: 1.5rem;
 }
 
 .footer__icon {
@@ -404,13 +410,17 @@ justify-self: center;
         margin: 0;
     }
 
+    header {
+        top: 2px;
+    }
+    
     .section {
         margin-bottom: var(--mb-6);
     }
 
     .section-title::after {
-        width: 80px;
         top: 3rem;
+        width: 80px;
     }
 
     .nav {
@@ -423,8 +433,9 @@ justify-self: center;
     }
 
     .nav__item {
-        margin-left: var(--mb-6);
         margin-bottom: 0;
+        margin-left: var(--mb-6);
+        
     }
 
     .nav__toggle {
@@ -444,10 +455,10 @@ justify-self: center;
     }
     
     .home__social {
+        align-self: flex-end;
+        flex-direction: row;
         padding-top: 0;
         padding-bottom: 2.5rem;
-        flex-direction: row;
-        align-self: flex-end;
     }
 
     .home__social-icon {
@@ -456,13 +467,13 @@ justify-self: center;
     }
 
     .home__img {
-        width: 457px;
         bottom: 15%;
+        width: 457px;
     }
 
     .about__container, .skills__container {
-        grid-template-columns: repeat(2, 1fr);
         align-items: center;
+        grid-template-columns: repeat(2, 1fr);
         text-align: initial;
     }
 
@@ -475,9 +486,9 @@ justify-self: center;
     }
 
     .work__container {
+        column-gap: 2rem;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        column-gap: 2rem;
     }
     
     .contact__form {
@@ -492,11 +503,17 @@ justify-self: center;
 
 @media screen and (max-width: 1024px) {
     .bd-grid {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .home__img {
         right: 10%;
     }
 }    
+
+@media screen and (min-width: 1440px) {
+    header {
+        top: 10px;
+    }
+}
