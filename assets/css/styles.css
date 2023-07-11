@@ -219,6 +219,12 @@ li a {
 
 .nav__logo {
     color: var(--second-color);
+    left: 40px;
+    position: fixed;
+}
+
+.nav__name {
+  padding-bottom: 40px;
 }
 
 .nav__toggle {
