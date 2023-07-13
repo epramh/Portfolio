@@ -199,12 +199,15 @@ li a {
 }
 
 .nav__link {
+    background-color: var(--first-color);
     color: #fff;
     position: relative;
 }
 
 .nav__link:hover  {
+    background-color: var(--tw-ring-color);
     position: relative;
+    transform: scale3d(1.1, 1.1, 1.1);
 }
 
 .nav__link:hover::after{
@@ -235,7 +238,7 @@ li a {
 
 /*Active menu*/
 .active::after{
-    background-color: var(--first-color);
+    /* background-color: var(--first-color); */
     content: "";
     height: 0.18rem;
     left: 0;
