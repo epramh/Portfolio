@@ -202,6 +202,7 @@ li a {
     background-color: var(--first-color);
     color: #fff;
     position: relative;
+    text-shadow: 0.1em 0.1em 0.1em var(--second-color), 0.1em 0.1em 0.5em var(--first-color);
 }
 
 .nav__link:hover  {
