@@ -224,6 +224,7 @@ li a {
     color: var(--second-color);
     left: 40px;
     position: fixed;
+    text-shadow: 0.1em 0.1em 0.1em var(--second-color), 0.1em 0.1em 0.5em var(--first-color);
 }
 
 .nav__name {
