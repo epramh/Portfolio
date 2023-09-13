@@ -410,8 +410,13 @@ li a {
 .contact__form {
     align-content: center;
     display: grid;
-  }
+}
 
+.contact__input, textarea {
+    background-color: var(--first-color);
+    border: 2px solid var(--second-color);
+    padding: 5px;
+}
 /* ===== FOOTER =====*/
 .footer {
     color: #fff;
