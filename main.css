@@ -135,6 +135,11 @@ span{
     color: orange;
 }
 
+.contact__form {
+  align-content: center;
+  display: grid;
+}
+
 input[type='text'], input[type='email'] {
   border: 1px solid #2F5A78;
   width: 150px;
