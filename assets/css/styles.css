@@ -407,7 +407,10 @@ li a {
 
 
 /* ===== CONTACT =====*/
-
+.contact__form {
+    align-content: center;
+    display: grid;
+  }
 
 /* ===== FOOTER =====*/
 .footer {
