@@ -27,6 +27,8 @@
         --body-font: 'Poppins', sans-serif;
         --big-font-size: 2rem;
         --h2-font-size: 1.25rem;
+        --label-font:'Times New Roman', 'serif';
+        --placeholder-font:'serif';
         --normal-font-size: 0.938rem;
         --small-font-size: .75rem;
     }
@@ -126,6 +128,10 @@ img {
 .section {
     padding-bottom: 2rem;
     padding-top: 3rem;
+}
+
+label, ::placeholder, input {
+    font-family: var(--label-font);
 }
 
 /*===== LAYOUT =====*/
