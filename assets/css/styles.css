@@ -611,7 +611,7 @@ body{
     }
 
     .home__img {
-        bottom: 15%;
+        bottom: 0;
         width: 457px;
     }
 
