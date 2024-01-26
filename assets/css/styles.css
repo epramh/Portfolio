@@ -515,9 +515,22 @@ body {
 /* ===== WORK =====*/
 
 /* ===== CONTACT =====*/
+.contact__container {
+  justify-items: center;
+  margin: 0 auto;
+}
+
 .contact__form {
   align-content: center;
+  background-color: var(--second-color);
+  border-radius: 4%;
   display: grid;
+  padding: 60px;
+}
+
+label {
+  color: #fff;
+  text-align: center;
 }
 
 .contact__input,
@@ -531,14 +544,20 @@ input {
   transition: all 0.5s;
 }
 
-.contact__input,
-input[type='submit'] {
+.contact__input {
   border-radius: 50px;
   width: 100%;
 }
 
 textarea#message {
   border-radius: 20px;
+}
+
+input[type='submit'] {
+  border-radius: 50px;
+  margin-left: 120px;
+  padding: 10px;
+  width: 40%;
 }
 
 .contact__input:hover,
@@ -664,7 +683,7 @@ input[type='submit']:hover {
   }
 
   .contact__form {
-    width: 360px;
+    width: 600px;
   }
 
   .contact__container {
