@@ -555,7 +555,8 @@ textarea#message {
 
 input[type='submit'] {
   border-radius: 50px;
-  margin-left: 120px;
+  margin-left: 140px;
+  margin-top: 40px;
   padding: 10px;
   width: 40%;
 }
